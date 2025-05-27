@@ -5,19 +5,19 @@
 Train::Train() : countOp(0), first(nullptr) {}
 
 void Train::addCar(bool state) {
-  Car* new = new Car();
+  Car* newCar = new Car();
   new->light = state;
 
   if (first == nullptr) {
-    first = new;
+    first = newCar;
     first->next = first;
     first->prev = first;
   } else {
     Car* last = first->prev;
-    last->next = new;
-    new->prev = last;
-    new->next = first;
-    first->prev = new;
+    last->next = newCar;
+    newCar->prev = last;
+    newCar->next = first;
+    first->prev = newCar;
   }
 }
 
