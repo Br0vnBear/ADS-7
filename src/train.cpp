@@ -6,7 +6,7 @@ Train::Train() : countOp(0), first(nullptr) {}
 
 void Train::addCar(bool state) {
   Car* newCar = new Car();
-  new->light = state;
+  newCar->light = state;
 
   if (first == nullptr) {
     first = newCar;
